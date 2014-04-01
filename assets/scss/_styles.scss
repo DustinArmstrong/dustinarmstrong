@@ -1,0 +1,51 @@
+@mixin transition($duration: 1s) {
+	transition: all $duration;
+		-webkit-transition: all $duration;
+		-moz-transition: all $duration;
+}
+body {
+	&.flat {
+		background-color: #E56B6B;
+		@include transition(2s);
+		.intro {
+			color: white;
+			@include transition;
+		}
+		button {
+			border-radius: 200px;
+			padding: 1em;
+			background: transparent;
+			color: white;
+			@include transition(2s);
+			border: 2px solid white;
+			outline: 0;
+			// &:before {
+			// 	content: "Contact me"
+			// }
+			&:focus {
+				box-shadow: none;
+			}
+			&:hover {
+				background: rgba(0,0,0,.1);
+			}
+		}
+	}
+	&.simple {
+		background-color: rgb(255,255,255);
+		@include transition(2s);
+		.intro {
+			color: black;
+			@include transition;
+		}
+		button {
+			border-radius: 0;
+			background: black;
+			border: 0px;
+			@include transition(2s);
+			// &:before {
+			// 	content: "Let me show you";
+			// }
+		}
+	}
+}
+	
