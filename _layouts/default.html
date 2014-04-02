@@ -12,33 +12,69 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/app.css">
         <script src="/assets/js/jquery-v2.0.3.min.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/fsn3qln.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     </head>
-    <body class="simple">
+    <body class="flat">
 
         <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+          <div class="row">
+            <div class="screen-11 screen-centered columns">
+              <nav>
+                <ul>
+                  <li>Case Studies</li>
+                  <li>Github</li>
+                  <li>Twitter</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </nav>
             </div>
           </div>
+          <div class="row full-width">
+            <div class="screen-11 screen-centered medium-8 medium-centered columns">
+              <header>
+              <div class="row">
+                
+                  <div class="screen-12 medium-2 columns text-center">
+                    <div class="avatar"></div>
+                  </div>
+                  <div class="screen-12 medium-10 columns">
+                    <h1 class="page-header">{{ site.name }}<small>{{ page.title }}</small></h1>
+                  </div>
+                
+              </div>
+              </header>
+            </div>
+          </div>
+          
+          
+          <div class="row full-width content">
+            <div class="screen-11 screen-centered medium-8 medium-centered columns">
+              {{ content }}
+            </div>
+          </div>
+
+          {% if page.url == "/index.html" %}
+            <div class="introduction">
+              <div class="vertical-wrapper">
+                <div class="row">
+                  <div class="screen-11 screen-centered medium-8 medium-centered columns">
+                    <header>
+                      <h2 class="intro">Hello. My name is Dustin Armstrong, and I make things pretty on the internet.</h2>
+                      <button class="hide-introduction">Click here for the good stuff.</button>
+                    </header>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          <footer>
+            <div class="row">
+              <div class="screen-11 screen-centered medium-8 medium-centered columns">
+            </div>
+          </footer>
         </div>
       <script src="/assets/js/scripts.js"></script>
     </body>

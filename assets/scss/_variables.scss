@@ -46,7 +46,7 @@
 // Font Families
 //////////////////////////////
 
-	// $h-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default h element font-family
+	$h-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default h element font-family
 	// $content-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default content font-family
 
 //////////////////////////////
@@ -54,7 +54,7 @@
 //////////////////////////////
 
 	// $h-font-size: 2em; // Sets default h element font-size
-	// $h-font-weight: 400; // Sets default h element font-weight
+	$h-font-weight: 300; // Sets default h element font-weight
 	// $content-font-size: 1em; // Sets default content font-size
 	// $content-font-weight: 300; // Sets default content font-weight
 

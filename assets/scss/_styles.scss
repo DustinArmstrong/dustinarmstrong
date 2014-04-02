@@ -1,50 +1,114 @@
+$white: rgb(240, 240, 240);
 @mixin transition($duration: 1s) {
 	transition: all $duration;
 		-webkit-transition: all $duration;
 		-moz-transition: all $duration;
 }
+.hidden {
+	display: none;
+}
+html, body {
+	height: 100%;
+}
 body {
+	max-height: 100%;
+	color: $white;
 	&.flat {
-		background-color: #E56B6B;
-		@include transition(2s);
-		.intro {
-			color: white;
-			@include transition;
-		}
-		button {
-			border-radius: 200px;
-			padding: 1em;
-			background: transparent;
-			color: white;
-			@include transition(2s);
-			border: 2px solid white;
-			outline: 0;
-			// &:before {
-			// 	content: "Contact me"
-			// }
-			&:focus {
-				box-shadow: none;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(http://imgsrc.hubblesite.org/hu/db/images/hs-2006-01-a-large_web.jpg);
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		header {
+			margin: 2em 0 1em 0;
+			text-align: center;
+			@media #{$medium} {
+				text-align: left;
 			}
-			&:hover {
-				background: rgba(0,0,0,.1);
+			.avatar {
+				background: url(/assets/img/dustinarmstrong.jpeg) center center no-repeat;
+				background-size: cover;
+				width: 3.8em;
+				height: 3.8em;
+				margin-bottom: 1em;
+				display: inline-block;
+				border-radius: 200px;
+				-webkit-animation-delay: 1s;
+				@media #{$medium} {
+					margin-bottom: 0;
+				}
+			}
+			h1 {
+				color: $white;
+				text-transform: uppercase;
+				small {
+					font-style: italic;
+				}
+			}
+
+		}
+		nav {
+			ul {
+				margin-top: 1em;
+				text-align: center;
+				@media #{$medium} {
+					text-align: right;
+				}
+				li {
+					display: inline-block;
+					border-radius: 200px;
+					padding: .5em 1em;
+					margin: 0 .2em .5em 0;
+					font-size: .7em;
+					font-family: $h-font-family;
+					background: transparent;
+					border: 2px solid white;
+					outline: 0;
+					// &:before {
+					// 	content: "Contact me"
+					// }
+					&:focus {
+						box-shadow: none;
+					}
+					&:hover {
+						background-image: -webkit-linear-gradient(top, rgba(0,0,0,.3), rgba(0,0,0,.3));
+						background-position: center center;
+						background-attachment: fixed;
+						background-size: cover;
+					}
+				}
+				.content {
+					padding: 1em 0;
+				}
 			}
 		}
 	}
-	&.simple {
+	.introduction {
+		position: fixed;
+		display: table;
+		//display: none;
+		top: 0;
+		left: 0;
+		height: 100%;
+		max-height: 100%;
+		overflow: hidden;
+		width: 100%;
 		background-color: rgb(255,255,255);
-		@include transition(2s);
+		.vertical-wrapper {
+			display: table-cell;
+			vertical-align: middle;
+		}
 		.intro {
 			color: black;
-			@include transition;
 		}
 		button {
 			border-radius: 0;
 			background: black;
 			border: 0px;
-			@include transition(2s);
-			// &:before {
-			// 	content: "Let me show you";
-			// }
+			@include transition(.3s);
+			&:hover {
+				background: lighten(black, 20%);
+				@include transition(.3s);
+			}
 		}
 	}
 }
