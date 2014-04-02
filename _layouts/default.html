@@ -16,14 +16,15 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     </head>
-    <body class="flat">
+    <body class="blue">
 
         <div class="site">
           <div class="row">
-            <div class="screen-11 screen-centered columns">
+            <div class="screen-12 screen-centered columns">
               <nav>
                 <ul>
                   <li>Case Studies</li>
+                  <li>Blog</li>
                   <li>Github</li>
                   <li>Twitter</li>
                   <li>LinkedIn</li>
@@ -34,25 +35,17 @@
           <div class="row full-width">
             <div class="screen-11 screen-centered medium-8 medium-centered columns">
               <header>
-              <div class="row">
-                
-                  <div class="screen-12 medium-2 columns text-center">
-                    <div class="avatar"></div>
-                  </div>
-                  <div class="screen-12 medium-10 columns">
-                    <h1 class="page-header">{{ site.name }}<small>{{ page.title }}</small></h1>
-                  </div>
-                
-              </div>
+                <div class="headercenter">
+                  <div class="avatar"><img src="assets/img/dustinarmstrong.jpeg"></div>
+                  <h1 class="page-header">{{ site.name }}<small>{{ page.title }}</small></h1>
+                </div>
               </header>
             </div>
           </div>
           
           
           <div class="row full-width content">
-            <div class="screen-11 screen-centered medium-8 medium-centered columns">
-              {{ content }}
-            </div>
+            {{ content }}
           </div>
 
           {% if page.url == "/index.html" %}
