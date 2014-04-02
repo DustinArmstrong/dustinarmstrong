@@ -1,4 +1,4 @@
 name: Dustin Armstrong
-basurl: /dustinarmstrong
+baseurl: /dustinarmstrong
 markdown: redcarpet
 pygments: true
