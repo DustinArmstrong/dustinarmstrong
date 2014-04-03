@@ -67,23 +67,69 @@ body {
 		ul {
 			margin-top: 1em;
 			text-align: center;
+			height: 0;
+			@include transition;
+			&:before {
+				content: "Menu";
+				font-family: $h-font-family;
+				font-size: 1em;
+				position: absolute;
+				right: 1em;
+				top: 0;
+				padding: 1em 2em;
+				display: block;
+				border: 1px solid $white;
+				border-radius: 200px;
+				overflow: hidden;
+				height: 0;
+			}
 			@media #{$medium} {
 				text-align: right;
+				height: auto;
+				&:before {
+					display: none;
+				}
+			}
+			&.expand {
+				height: auto;
+				@include transition;
+				&:before {
+					content: "X";
+					top: 8em;
+					right: .1em;
+				}
+				li {
+					display: inline-block;
+				}
 			}
 			li {
-				display: inline-block;
+				display: none;
 				border-radius: 200px;
 				padding: .3em 1em;
 				margin: 0 .1em .5em 0;
-				font-size: .7em;
+				font-size: 1em;
 				font-family: $h-font-family;
 				background: transparent;
-				border: 2px solid $white;
+				border: 1px solid $white;
 				outline: 0;
 				@include transition(.3s);
+				width: 49%;
+				&:nth-child(even) {
+					float: right;
+				}
+				&:nth-child(odd) {
+					float: left;
+				}
 				@media #{$medium} {
+					font-size: .8em;
+					display: inline-block;
+					width: auto;
 					padding: .5em 1em;
-					margin: 0 .2em .5em 0;
+					margin: 0 .2em 1em 0;
+					border: 2px solid $white;
+					&:nth-child(even), &:nth-child(odd) {
+						float: none;
+					}
 				}
 				&:focus {
 					box-shadow: none;

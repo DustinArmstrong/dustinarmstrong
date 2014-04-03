@@ -11,6 +11,13 @@ $(document).ready(
 		$('.section:nth-child(odd)').addClass('animated slideInLeft');
 		$('.section:nth-child(even)').addClass('animated slideInRight');
 	}),
+	$('nav.primary ul').click(function() {
+		if ($(this).hasClass('expand')) {
+			$(this).removeClass();
+		} else {
+			$(this).addClass('expand');
+		}
+	}),
 	$('.avatar').click(function() {
 		if ($('body').hasClass('blue')) {
 			$('body').removeClass().addClass('pink');
