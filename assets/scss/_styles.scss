@@ -44,7 +44,7 @@ body {
 		h1 {
 			color: $white;
 			text-transform: uppercase;
-			font-size: 1em;
+			font-size: 1.8em;
 			margin-bottom: 0;
 			line-height: 1em;
 			@media #{$medium} {
@@ -91,11 +91,11 @@ body {
 				}
 			}
 			&.expand {
-				height: auto;
+				height: 160px;
 				@include transition;
 				&:before {
-					content: "X";
-					top: 8em;
+					content: "close";
+					top: 8.2em;
 					right: .1em;
 				}
 				li {
@@ -121,7 +121,7 @@ body {
 					float: left;
 				}
 				@media #{$medium} {
-					font-size: .8em;
+					font-size: .7em;
 					display: inline-block;
 					width: auto;
 					padding: .5em 1em;

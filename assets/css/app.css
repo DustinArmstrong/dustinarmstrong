@@ -3499,7 +3499,7 @@ body {
     body header h1 {
       color: #f0f0f0;
       text-transform: uppercase;
-      font-size: 1em;
+      font-size: 1.8em;
       margin-bottom: 0;
       line-height: 1em; }
       @media only screen and (min-width: 768px) {
@@ -3541,13 +3541,13 @@ body {
         body nav ul:before {
           display: none; } }
     body nav ul.expand {
-      height: auto;
+      height: 160px;
       transition: all 1s;
       -webkit-transition: all 1s;
       -moz-transition: all 1s; }
       body nav ul.expand:before {
-        content: "X";
-        top: 8em;
+        content: "close";
+        top: 8.2em;
         right: .1em; }
       body nav ul.expand li {
         display: inline-block; }
@@ -3571,7 +3571,7 @@ body {
         float: left; }
       @media only screen and (min-width: 768px) {
         body nav ul li {
-          font-size: .8em;
+          font-size: .7em;
           display: inline-block;
           width: auto;
           padding: .5em 1em;
