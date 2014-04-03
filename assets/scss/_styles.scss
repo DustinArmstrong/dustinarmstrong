@@ -42,6 +42,9 @@ body {
 			-webkit-animation-delay: 1s;
 			float: none;
 			clear: both;
+			a {
+				background-image: none;
+			}
 			img {
 				width: 100%;
 				border-radius: 200px;	
@@ -115,7 +118,6 @@ body {
 				padding: .3em 1em;
 				margin: 0 .1em .5em 0;
 				font-size: 1em;
-				font-family: $h-font-family;
 				background: transparent;
 				border: 1px solid $white;
 				outline: 0;
@@ -126,6 +128,16 @@ body {
 				}
 				&:nth-child(odd) {
 					float: left;
+				}
+				&:focus {
+					box-shadow: none;
+				}
+				&:hover {
+					background: rgba(0,0,0,0.2);
+					@include transition(.3s);
+				}
+				&:last-child {
+					margin-right: 0;
 				}
 				@media #{$medium} {
 					font-size: .7em;
@@ -138,15 +150,9 @@ body {
 						float: none;
 					}
 				}
-				&:focus {
-					box-shadow: none;
-				}
-				&:hover {
-					background: rgba(0,0,0,0.2);
-					@include transition(.3s);
-				}
-				&:last-child {
-					margin-right: 0;
+				a, a:visited, a:hover {
+					color: $white;
+					font-family: $h-font-family;
 				}
 			}
 			.content {
@@ -155,11 +161,17 @@ body {
 		}
 	}
 	.section {
-		padding: 4em 0 0 0;
+		padding: 4em 0;
 		background: black;
-		&:last-child {
-			padding: 0 0 4em 0;
+		&:nth-child(even) {
+			background: rgb(30,30,30);
 		}
+		header {
+			margin-top: 0;
+		}
+		// &:last-child {
+		// 	padding: 0 0 4em 0;
+		// }
 	}
 	.introduction {
 		position: fixed;

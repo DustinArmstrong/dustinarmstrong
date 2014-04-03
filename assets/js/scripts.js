@@ -17,12 +17,12 @@ $(document).ready(
 		} else {
 			$(this).addClass('expand');
 		}
-	}),
-	$('.avatar').click(function() {
-		if ($('body').hasClass('blue')) {
-			$('body').removeClass().addClass('pink');
-		} else {
-			$('body').removeClass().addClass('blue');
-		}
 	})
+	// $('.avatar').click(function() {
+	// 	if ($('body').hasClass('blue')) {
+	// 		$('body').removeClass().addClass('pink');
+	// 	} else {
+	// 		$('body').removeClass().addClass('blue');
+	// 	}
+	// })
 );
