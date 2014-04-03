@@ -459,450 +459,480 @@ you can use the generic selector below, but it's slower:
     position: relative; }
 
   .screen-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
 
   .screen-2 {
     width: 16.66667%;
     position: relative; }
 
   .screen-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
 
   .screen-3 {
     width: 25%;
     position: relative; }
 
   .screen-offset-3 {
-    margin-left: 25%; }
+    margin-left: 25% !important; }
 
   .screen-4 {
     width: 33.33333%;
     position: relative; }
 
   .screen-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
 
   .screen-5 {
     width: 41.66667%;
     position: relative; }
 
   .screen-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
 
   .screen-6 {
     width: 50%;
     position: relative; }
 
   .screen-offset-6 {
-    margin-left: 50%; }
+    margin-left: 50% !important; }
 
   .screen-7 {
     width: 58.33333%;
     position: relative; }
 
   .screen-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
 
   .screen-8 {
     width: 66.66667%;
     position: relative; }
 
   .screen-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
 
   .screen-9 {
     width: 75%;
     position: relative; }
 
   .screen-offset-9 {
-    margin-left: 75%; }
+    margin-left: 75% !important; }
 
   .screen-10 {
     width: 83.33333%;
     position: relative; }
 
   .screen-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.33333% !important; }
 
   .screen-11 {
     width: 91.66667%;
     position: relative; }
 
   .screen-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.66667% !important; }
 
   .screen-12 {
     width: 100%;
     position: relative; }
 
   .screen-offset-12 {
-    margin-left: 100%; }
+    margin-left: 100% !important; }
 
   .screen-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .screen-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 600px) {
   .small-1 {
     width: 8.33333%;
     position: relative; }
 
   .small-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
 
   .small-2 {
     width: 16.66667%;
     position: relative; }
 
   .small-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
 
   .small-3 {
     width: 25%;
     position: relative; }
 
   .small-offset-3 {
-    margin-left: 25%; }
+    margin-left: 25% !important; }
 
   .small-4 {
     width: 33.33333%;
     position: relative; }
 
   .small-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
 
   .small-5 {
     width: 41.66667%;
     position: relative; }
 
   .small-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
 
   .small-6 {
     width: 50%;
     position: relative; }
 
   .small-offset-6 {
-    margin-left: 50%; }
+    margin-left: 50% !important; }
 
   .small-7 {
     width: 58.33333%;
     position: relative; }
 
   .small-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
 
   .small-8 {
     width: 66.66667%;
     position: relative; }
 
   .small-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
 
   .small-9 {
     width: 75%;
     position: relative; }
 
   .small-offset-9 {
-    margin-left: 75%; }
+    margin-left: 75% !important; }
 
   .small-10 {
     width: 83.33333%;
     position: relative; }
 
   .small-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.33333% !important; }
 
   .small-11 {
     width: 91.66667%;
     position: relative; }
 
   .small-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.66667% !important; }
 
   .small-12 {
     width: 100%;
     position: relative; }
 
   .small-offset-12 {
-    margin-left: 100%; }
+    margin-left: 100% !important; }
 
   .small-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .small-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 768px) {
   .medium-1 {
     width: 8.33333%;
     position: relative; }
 
   .medium-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
 
   .medium-2 {
     width: 16.66667%;
     position: relative; }
 
   .medium-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
 
   .medium-3 {
     width: 25%;
     position: relative; }
 
   .medium-offset-3 {
-    margin-left: 25%; }
+    margin-left: 25% !important; }
 
   .medium-4 {
     width: 33.33333%;
     position: relative; }
 
   .medium-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
 
   .medium-5 {
     width: 41.66667%;
     position: relative; }
 
   .medium-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
 
   .medium-6 {
     width: 50%;
     position: relative; }
 
   .medium-offset-6 {
-    margin-left: 50%; }
+    margin-left: 50% !important; }
 
   .medium-7 {
     width: 58.33333%;
     position: relative; }
 
   .medium-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
 
   .medium-8 {
     width: 66.66667%;
     position: relative; }
 
   .medium-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
 
   .medium-9 {
     width: 75%;
     position: relative; }
 
   .medium-offset-9 {
-    margin-left: 75%; }
+    margin-left: 75% !important; }
 
   .medium-10 {
     width: 83.33333%;
     position: relative; }
 
   .medium-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.33333% !important; }
 
   .medium-11 {
     width: 91.66667%;
     position: relative; }
 
   .medium-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.66667% !important; }
 
   .medium-12 {
     width: 100%;
     position: relative; }
 
   .medium-offset-12 {
-    margin-left: 100%; }
+    margin-left: 100% !important; }
 
   .medium-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .medium-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 1024px) {
   .large-1 {
     width: 8.33333%;
     position: relative; }
 
   .large-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
 
   .large-2 {
     width: 16.66667%;
     position: relative; }
 
   .large-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
 
   .large-3 {
     width: 25%;
     position: relative; }
 
   .large-offset-3 {
-    margin-left: 25%; }
+    margin-left: 25% !important; }
 
   .large-4 {
     width: 33.33333%;
     position: relative; }
 
   .large-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
 
   .large-5 {
     width: 41.66667%;
     position: relative; }
 
   .large-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
 
   .large-6 {
     width: 50%;
     position: relative; }
 
   .large-offset-6 {
-    margin-left: 50%; }
+    margin-left: 50% !important; }
 
   .large-7 {
     width: 58.33333%;
     position: relative; }
 
   .large-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
 
   .large-8 {
     width: 66.66667%;
     position: relative; }
 
   .large-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
 
   .large-9 {
     width: 75%;
     position: relative; }
 
   .large-offset-9 {
-    margin-left: 75%; }
+    margin-left: 75% !important; }
 
   .large-10 {
     width: 83.33333%;
     position: relative; }
 
   .large-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.33333% !important; }
 
   .large-11 {
     width: 91.66667%;
     position: relative; }
 
   .large-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.66667% !important; }
 
   .large-12 {
     width: 100%;
     position: relative; }
 
   .large-offset-12 {
-    margin-left: 100%; }
+    margin-left: 100% !important; }
 
   .large-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .large-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 @media only screen and (min-width: 1300px) {
   .extra-large-1 {
     width: 8.33333%;
     position: relative; }
 
   .extra-large-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
 
   .extra-large-2 {
     width: 16.66667%;
     position: relative; }
 
   .extra-large-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
 
   .extra-large-3 {
     width: 25%;
     position: relative; }
 
   .extra-large-offset-3 {
-    margin-left: 25%; }
+    margin-left: 25% !important; }
 
   .extra-large-4 {
     width: 33.33333%;
     position: relative; }
 
   .extra-large-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
 
   .extra-large-5 {
     width: 41.66667%;
     position: relative; }
 
   .extra-large-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
 
   .extra-large-6 {
     width: 50%;
     position: relative; }
 
   .extra-large-offset-6 {
-    margin-left: 50%; }
+    margin-left: 50% !important; }
 
   .extra-large-7 {
     width: 58.33333%;
     position: relative; }
 
   .extra-large-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
 
   .extra-large-8 {
     width: 66.66667%;
     position: relative; }
 
   .extra-large-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
 
   .extra-large-9 {
     width: 75%;
     position: relative; }
 
   .extra-large-offset-9 {
-    margin-left: 75%; }
+    margin-left: 75% !important; }
 
   .extra-large-10 {
     width: 83.33333%;
     position: relative; }
 
   .extra-large-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.33333% !important; }
 
   .extra-large-11 {
     width: 91.66667%;
     position: relative; }
 
   .extra-large-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.66667% !important; }
 
   .extra-large-12 {
     width: 100%;
     position: relative; }
 
   .extra-large-offset-12 {
-    margin-left: 100%; }
+    margin-left: 100% !important; }
 
   .extra-large-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; } }
+    float: none !important; }
+
+  .extra-large-uncentered {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; } }
 body {
   font-size: 18px; }
   @media only screen and (min-width: 600px) {
@@ -3351,6 +3381,8 @@ body {
     background: #E56B6B; }
   body.blue {
     background: #1ac6cc; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #f0f0f0 !important; }
   body p {
     margin-bottom: 1em; }
     body p:last-child {
@@ -3358,6 +3390,8 @@ body {
   body header {
     margin: 2em 0 3em 0;
     text-align: center; }
+    body header:not(.main-header) {
+      text-align: left; }
     body header .avatar {
       margin-bottom: 1em;
       display: inline-block;
@@ -3366,13 +3400,15 @@ body {
       -webkit-animation-delay: 1s;
       float: none;
       clear: both; }
+      body header .avatar a {
+        background-image: none; }
       body header .avatar img {
         width: 100%;
         border-radius: 200px; }
     body header h1 {
       color: #f0f0f0;
       text-transform: uppercase;
-      font-size: 3em;
+      font-size: 1.8em;
       margin-bottom: 0;
       line-height: 1em; }
       @media only screen and (min-width: 768px) {
@@ -3389,27 +3425,59 @@ body {
         margin-top: .4em; }
   body nav ul {
     margin-top: 1em;
-    text-align: center; }
+    text-align: center;
+    height: 0;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s; }
+    body nav ul:before {
+      content: "Menu";
+      font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1em;
+      position: absolute;
+      right: .1em;
+      top: 0;
+      padding: 1em;
+      display: block;
+      border: 1px solid #f0f0f0;
+      border-radius: 200px;
+      overflow: hidden;
+      height: 0; }
     @media only screen and (min-width: 768px) {
       body nav ul {
-        text-align: right; } }
+        text-align: right;
+        height: auto !important; }
+        body nav ul:before {
+          display: none; } }
+    body nav ul.expand {
+      height: 145px;
+      overflow: hidden;
+      transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s; }
+      body nav ul.expand:before {
+        content: "Close";
+        top: 8.2em;
+        right: .1em; }
+      body nav ul.expand li {
+        display: inline-block; }
     body nav ul li {
-      display: inline-block;
+      display: none;
       border-radius: 200px;
       padding: .3em 1em;
       margin: 0 .1em .5em 0;
-      font-size: .7em;
-      font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 1em;
       background: transparent;
-      border: 2px solid #f0f0f0;
+      border: 1px solid #f0f0f0;
       outline: 0;
       transition: all 0.3s;
       -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s; }
-      @media only screen and (min-width: 768px) {
-        body nav ul li {
-          padding: .5em 1em;
-          margin: 0 .2em .5em 0; } }
+      -moz-transition: all 0.3s;
+      width: 49%; }
+      body nav ul li:nth-child(even) {
+        float: right; }
+      body nav ul li:nth-child(odd) {
+        float: left; }
       body nav ul li:focus {
         box-shadow: none; }
       body nav ul li:hover {
@@ -3419,11 +3487,28 @@ body {
         -moz-transition: all 0.3s; }
       body nav ul li:last-child {
         margin-right: 0; }
+      @media only screen and (min-width: 768px) {
+        body nav ul li {
+          font-size: .7em;
+          display: inline-block;
+          width: auto;
+          padding: .5em 1em;
+          margin: 0 .2em 1em 0;
+          border: 2px solid #f0f0f0; }
+          body nav ul li:nth-child(even), body nav ul li:nth-child(odd) {
+            float: none; } }
+      body nav ul li a, body nav ul li a:visited, body nav ul li a:hover {
+        color: #f0f0f0;
+        font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
     body nav ul .content {
       padding: 1em 0; }
   body .section {
     padding: 4em 0;
     background: black; }
+    body .section:nth-child(even) {
+      background: #1e1e1e; }
+    body .section header {
+      margin-top: 0; }
   body .introduction {
     position: fixed;
     display: table;
