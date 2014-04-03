@@ -29,7 +29,7 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
 		}
 		@if $size != push and $size != pull {
 			.#{$size}-offset#{-$i} {
-				margin-left: $column-calc;
+				margin-left: $column-calc !important;
 			}
 		}
 	}
@@ -39,6 +39,12 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
 			margin-left: auto;
 			margin-right: auto;
 			float: none !important;
+		}
+		.#{$size}-uncentered {
+			position: relative;
+			margin-left: 0;
+			margin-right: 0;
+			float: left !important;
 		}
 	}
 }

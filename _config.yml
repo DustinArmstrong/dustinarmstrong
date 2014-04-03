@@ -2,3 +2,4 @@ name: Dustin Armstrong
 baseurl: /dustinarmstrong
 markdown: redcarpet
 pygments: true
+permalink: /:categories/:title

@@ -19,6 +19,9 @@ body {
 	&.blue {
 		background: rgb(26,198,204)
 	}
+	h1, h2, h3, h4, h5, h6 {
+		color: $white !important;
+	}
 	p {
 		margin-bottom: 1em;
 		&:last-child {
@@ -28,6 +31,9 @@ body {
 	header {
 		margin: 2em 0 3em 0;
 		text-align: center;
+		&:not(.main-header) {
+			text-align: left;
+		}
 		.avatar {
 			margin-bottom: 1em;
 			display: inline-block;
@@ -68,15 +74,15 @@ body {
 			margin-top: 1em;
 			text-align: center;
 			height: 0;
-			@include transition;
+			@include transition(.1s);
 			&:before {
 				content: "Menu";
 				font-family: $h-font-family;
 				font-size: 1em;
 				position: absolute;
-				right: 1em;
+				right: .1em;
 				top: 0;
-				padding: 1em 2em;
+				padding: 1em;
 				display: block;
 				border: 1px solid $white;
 				border-radius: 200px;
@@ -85,16 +91,17 @@ body {
 			}
 			@media #{$medium} {
 				text-align: right;
-				height: auto;
+				height: auto !important;
 				&:before {
 					display: none;
 				}
 			}
 			&.expand {
-				height: 160px;
-				@include transition;
+				height: 145px;
+				overflow: hidden;
+				@include transition(.1s);
 				&:before {
-					content: "close";
+					content: "Close";
 					top: 8.2em;
 					right: .1em;
 				}
@@ -148,8 +155,11 @@ body {
 		}
 	}
 	.section {
-		padding: 4em 0;
+		padding: 4em 0 0 0;
 		background: black;
+		&:last-child {
+			padding: 0 0 4em 0;
+		}
 	}
 	.introduction {
 		position: fixed;

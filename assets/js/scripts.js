@@ -7,7 +7,7 @@ $(document).ready(
 		});
 		$('nav').addClass('animated slideInRight');
 		$('.avatar').addClass('animated flipInX');
-		$('header h1').addClass('animated slideInDown');
+		$('.main-header h1').addClass('animated slideInDown');
 		$('.section:nth-child(odd)').addClass('animated slideInLeft');
 		$('.section:nth-child(even)').addClass('animated slideInRight');
 	}),
