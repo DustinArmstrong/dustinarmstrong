@@ -1,4 +1,5 @@
 $white: rgb(240, 240, 240);
+$footer-height: 2em;
 @mixin transition($duration: 1s) {
 	transition: all $duration;
 		-webkit-transition: all $duration;
@@ -29,7 +30,6 @@ body {
 		color: $white !important;
 	}
 	p {
-		margin-bottom: 1em;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -37,9 +37,18 @@ body {
 	a {
 		color: $white;
 		background-image: linear-gradient(to top, rgba(0,0,0,0) 12%, $white 12%, $white 16%, rgba(0,0,0,0) 16%);
-		&:hover {
-			color: $white;
+		&:visited, &:hover {
+			color: inherit;
 		}
+	}
+	.site {
+		min-height: 100%;
+		margin-bottom: -$footer-height;
+		&:after {
+			content: "";
+			display: block;
+			height: $footer-height;
+		}	
 	}
 	// THIS NEEDS TO BE MERGED
 	header {
@@ -190,10 +199,29 @@ body {
 				background: black;
 			}
 		}
+		.post {
+			&.excerpt {
+				p {
+				margin-bottom: .3em;
+				}
+				.read-more {
+					float: right;
+					margin-right: 1em;
+					font-size: .9em;
+					font-style: italic;
+				}
+			}
+		}
 		header {
 			margin-top: 0;
 			margin-bottom: 1em;
 			text-align: center;
+			&.sidebar {
+				margin-bottom: .2em;
+				h1, .h1, h2, .h2 {
+					font-size: .7em;
+				}
+			}
 			h1, .h1, h2, .h2 {
 				margin-bottom: 0;
 			}
@@ -255,6 +283,12 @@ body {
 	}
 	.highlight {
 		background: #1A1A1A;
+	}
+	.site-footer {
+		text-align: center;
+		height: $footer-height;
+		padding: .5em 0;
+		font-family: $h-font-family;
 	}
 }
 	
