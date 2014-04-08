@@ -22,7 +22,7 @@ title: Front-End Designer &amp; Developer
 					<p class="meta">{{ post.date | date_to_string }}</p>
 				</header>
 				<div class="post excerpt">
-					{{ post.excerpt }} <a href="{{ site.baseurl )){{ post.url }}" class="read-more">Read More</a>
+					{{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
 				</div>
 			</article>
 		{% endfor %}
