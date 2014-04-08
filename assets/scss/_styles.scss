@@ -19,6 +19,12 @@ body {
 	&.blue {
 		background: rgb(26,198,204)
 	}
+	&.green {
+		background: #34EC86;
+	}
+	&.orange {
+		background: rgb(240, 154, 61);
+	}
 	h1, h2, h3, h4, h5, h6 {
 		color: $white !important;
 	}
@@ -28,11 +34,19 @@ body {
 			margin-bottom: 0;
 		}
 	}
+	a {
+		color: $white;
+		background-image: linear-gradient(to top, rgba(0,0,0,0) 12%, $white 12%, $white 16%, rgba(0,0,0,0) 16%);
+		&:hover {
+			color: $white;
+		}
+	}
+	// THIS NEEDS TO BE MERGED
 	header {
 		margin: 2em 0 3em 0;
 		text-align: center;
 		&:not(.main-header) {
-			text-align: left;
+			text-align: left !important;
 		}
 		.avatar {
 			margin-bottom: 1em;
@@ -50,7 +64,7 @@ body {
 				border-radius: 200px;	
 			}
 		}
-		h1 {
+		h1, .h1 {
 			color: $white;
 			text-transform: uppercase;
 			font-size: 1.8em;
@@ -115,7 +129,7 @@ body {
 			li {
 				display: none;
 				border-radius: 200px;
-				padding: .3em 1em;
+				padding: 0;
 				margin: 0 .1em .5em 0;
 				font-size: 1em;
 				background: transparent;
@@ -143,7 +157,6 @@ body {
 					font-size: .7em;
 					display: inline-block;
 					width: auto;
-					padding: .5em 1em;
 					margin: 0 .2em 1em 0;
 					border: 2px solid $white;
 					&:nth-child(even), &:nth-child(odd) {
@@ -153,6 +166,11 @@ body {
 				a, a:visited, a:hover {
 					color: $white;
 					font-family: $h-font-family;
+					padding: .3em 1em;
+					display: block;
+					@media #{$medium} {
+						padding: .5em 1em;
+					}
 				}
 			}
 			.content {
@@ -163,11 +181,35 @@ body {
 	.section {
 		padding: 4em 0;
 		background: black;
+		.highlight {
+			background: rgb(30,30,30);
+		}
 		&:nth-child(even) {
 			background: rgb(30,30,30);
+			.highlight {
+				background: black;
+			}
 		}
 		header {
 			margin-top: 0;
+			margin-bottom: 1em;
+			text-align: center;
+			h1, .h1, h2, .h2 {
+				margin-bottom: 0;
+			}
+			.meta {
+				font-family: $h-font-family;
+				font-size: .7em;
+				&:before, &:after {
+					content: "•";
+				}
+			}
+			a {
+				color: $white;
+				font-family: $h-font-family;
+				text-transform: uppercase;
+				background-image: none;
+			}
 		}
 		// &:last-child {
 		// 	padding: 0 0 4em 0;
@@ -175,8 +217,8 @@ body {
 	}
 	.introduction {
 		position: fixed;
-		 display: table;
-		//display: none;
+		//display: table;
+		display: none;
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -210,6 +252,9 @@ body {
 				@include transition(.3s);
 			}
 		}
+	}
+	.highlight {
+		background: #1A1A1A;
 	}
 }
 	
