@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, ul li dl, ol li dl, dt, dd, ol, ul li ol, ol li ol, ul, ul li ul, ol li ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1087,14 +1088,16 @@ code {
   font-size: .75em;
   color: #777;
   padding: .2em;
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin: 0 0 1.5em 0; }
   @media only screen and (min-width: 600px) {
     code {
       padding: .1em; } }
 
 blockquote {
   padding-left: 10px;
-  border-left: 5px solid #c8c7b8; }
+  border-left: 5px solid #c8c7b8;
+  margin: 0 0 1.5em 0; }
 
 cite {
   font-style: italic;
@@ -3381,17 +3384,29 @@ body {
     background: #E56B6B; }
   body.blue {
     background: #1ac6cc; }
+  body.green {
+    background: #34EC86; }
+  body.orange {
+    background: #f09a3d; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     color: #f0f0f0 !important; }
-  body p {
-    margin-bottom: 1em; }
-    body p:last-child {
-      margin-bottom: 0; }
+  body p:last-child {
+    margin-bottom: 0; }
+  body a {
+    color: #f0f0f0;
+    background-image: linear-gradient(to top, transparent 12%, #f0f0f0 12%, #f0f0f0 16%, transparent 16%); }
+    body a:visited, body a:hover {
+      color: inherit; }
+  body .site {
+    min-height: 100%;
+    margin-bottom: -2em; }
+    body .site:after {
+      content: "";
+      display: block;
+      height: 2em; }
   body header {
     margin: 2em 0 3em 0;
     text-align: center; }
-    body header:not(.main-header) {
-      text-align: left; }
     body header .avatar {
       margin-bottom: 1em;
       display: inline-block;
@@ -3405,21 +3420,21 @@ body {
       body header .avatar img {
         width: 100%;
         border-radius: 200px; }
-    body header h1 {
+    body header h1, body header .h1 {
       color: #f0f0f0;
       text-transform: uppercase;
       font-size: 1.8em;
       margin-bottom: 0;
       line-height: 1em; }
       @media only screen and (min-width: 768px) {
-        body header h1 {
+        body header h1, body header .h1 {
           margin-top: .1em;
           font-size: 2em; } }
       @media only screen and (min-width: 1024px) {
-        body header h1 {
+        body header h1, body header .h1 {
           margin-top: .2em;
           font-size: 2.5em; } }
-      body header h1 small {
+      body header h1 small, body header .h1 small {
         font-style: italic;
         line-height: 1em;
         margin-top: .4em; }
@@ -3464,7 +3479,7 @@ body {
     body nav ul li {
       display: none;
       border-radius: 200px;
-      padding: .3em 1em;
+      padding: 0;
       margin: 0 .1em .5em 0;
       font-size: 1em;
       background: transparent;
@@ -3492,26 +3507,59 @@ body {
           font-size: .7em;
           display: inline-block;
           width: auto;
-          padding: .5em 1em;
           margin: 0 .2em 1em 0;
           border: 2px solid #f0f0f0; }
           body nav ul li:nth-child(even), body nav ul li:nth-child(odd) {
             float: none; } }
       body nav ul li a, body nav ul li a:visited, body nav ul li a:hover {
         color: #f0f0f0;
-        font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+        font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        padding: .3em 1em;
+        display: block; }
+        @media only screen and (min-width: 768px) {
+          body nav ul li a, body nav ul li a:visited, body nav ul li a:hover {
+            padding: .5em 1em; } }
     body nav ul .content {
       padding: 1em 0; }
   body .section {
     padding: 4em 0;
     background: black; }
+    body .section .highlight {
+      background: #1e1e1e; }
     body .section:nth-child(even) {
       background: #1e1e1e; }
+      body .section:nth-child(even) .highlight {
+        background: black; }
+    body .section .post.excerpt p {
+      margin-bottom: .3em; }
+    body .section .post.excerpt .read-more {
+      float: right;
+      margin-right: 1em;
+      font-size: .9em;
+      font-style: italic; }
     body .section header {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 1em;
+      text-align: center; }
+      body .section header.sidebar {
+        margin-bottom: .2em; }
+        body .section header.sidebar h1, body .section header.sidebar .h1, body .section header.sidebar h2, body .section header.sidebar .h2 {
+          font-size: .7em; }
+      body .section header h1, body .section header .h1, body .section header h2, body .section header .h2 {
+        margin-bottom: 0; }
+      body .section header .meta {
+        font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: .7em; }
+        body .section header .meta:before, body .section header .meta:after {
+          content: "•"; }
+      body .section header a {
+        color: #f0f0f0;
+        font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-transform: uppercase;
+        background-image: none; }
   body .introduction {
     position: fixed;
-    display: table;
+    display: none;
     top: 0;
     left: 0;
     height: 100%;
@@ -3543,6 +3591,13 @@ body {
         transition: all 0.3s;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s; }
+  body .highlight {
+    background: #1A1A1A; }
+  body .site-footer {
+    text-align: center;
+    height: 2em;
+    padding: .5em 0;
+    font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .highlight {
   max-width: 100%;
