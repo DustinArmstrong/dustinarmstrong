@@ -1,10 +1,27 @@
       		<footer class="site-footer">
+      			<div class="contact row" id="contact">
+      				{% include default-columns.html %}
+						<form action="http://getsimpleform.com/messages?form_api_token=4525eb37bf3be47421fb41dcf2ce514e" method="post">
+							<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+							<input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+							<!-- all your input fields here.... -->
+							<label for="name">Name:</label>
+							<input type='text' name='content' id='name' />
+							<label>Email:</label>
+							<input type='email' name='content' id="email" />
+							<label for="comment">Message:</label>
+							<textarea name='content' id='comment'></textarea>
+							<input type='submit' value='Contact Me' />
+						</form>
+      				</div>
+      			</div>
         		<div class="row">
-              {% include default-columns.html %}
-                &copy;2014 Dustin Armstrong
-              </div>
+					{% include default-columns.html %}
+						&copy;2014 Dustin Armstrong
+					</div>
         		</div>
-    		  </footer>
+    		</footer>
+    	<script src="{{ site.baseurl }}/assets/js/jquery.scrollto.js"></script>	
       	<script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
     </body>
 </html>
