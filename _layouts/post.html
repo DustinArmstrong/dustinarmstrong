@@ -7,15 +7,16 @@ layout: posts
 			<article>
 				<header>
 					<h1 class="h2">{{ page.title }} / {{ page.client }}</h1>
-					<h2 class="h4">{{ page.skills }}</h2>
 					<h5>Employer: {{ page.employer }}</h5>
 				</header>
 				<div class="post">
-					<p>
+					<p class="case-study-details">
+						Skills: {{ page.skills }}
+						<br>
 						Site Active: {% if page.active == true %}Yes{% else %}No{% endif %}
-					<br>
+						<br>
 						URL: <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
-					<br>
+						<br>
 						Maintaining: {% if page.maintaining == true %}Yes{% else %}No{% endif %}
 					</p>
 					{{ content }}

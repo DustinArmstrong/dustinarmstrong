@@ -7,17 +7,18 @@ title:  These are my Case Studies
 	<div class="row full-width section">
 		{% include default-columns.html %}
 			<article>
-				<header>
+				<header class="case-study">
 					<h1 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} / {{ post.client }}</a></h1>
-					<h2 class="h4">{{ post.skills }}</h2>
 					<h5>Employer: {{ post.employer }}</h5>
 				</header>
 				<div class="post">
-					<p>
+					<p class="case-study-details">
+						Skills: {{ post.skills }}
+						<br>
 						Site Active: {% if post.active == true %}Yes{% else %}No{% endif %}
-					<br>
+						<br>
 						URL: <a href="{{ post.link }}" target="_blank">{{ post.link }}</a>
-					<br>
+						<br>
 						Maintaining: {% if post.maintaining == true %}Yes{% else %}No{% endif %}
 					</p>
 					{{ post.content }}

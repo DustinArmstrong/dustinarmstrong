@@ -7,7 +7,7 @@ active: true
 link: http://dobosdelights.com
 maintaining: false
 employer: Creative Fuse Initiative
-date:   2014-03-31 22:04:58
+date:   2014-03-30 22:04:58
 categories: case-study
 ---
 

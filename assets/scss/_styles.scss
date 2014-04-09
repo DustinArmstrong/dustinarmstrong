@@ -211,7 +211,7 @@ body {
 		.post {
 			&.excerpt {
 				p {
-				margin-bottom: .3em;
+					margin-bottom: .3em;
 				}
 				.read-more {
 					float: right;
@@ -221,6 +221,12 @@ body {
 					a {
 						background-image: none;
 					}
+				}
+			}
+			p {
+				&.case-study-details {
+					margin-top: 2em;
+					font-size: .8em;
 				}
 			}
 		}
