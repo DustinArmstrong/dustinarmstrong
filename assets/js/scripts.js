@@ -17,7 +17,15 @@ $(document).ready(
 		} else {
 			$(this).addClass('expand');
 		}
-	})
+	}),
+	$('a').scrollTo(),
+	$('.contact-toggle').click(function() {
+		if ($('#contact').hasClass('expand')) {
+			$('#contact').removeClass('expand');
+		} else {
+			$('#contact').addClass('expand');
+		}
+	})	
 	// $('.avatar').click(function() {
 	// 	if ($('body').hasClass('blue')) {
 	// 		$('body').removeClass().addClass('pink');
