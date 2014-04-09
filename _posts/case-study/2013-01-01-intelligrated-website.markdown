@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Corporate Website"
-client: "SellersToolbox"
+client: "Intelligrated"
 skills: Web Design, HTML, CSS, Drupal, Project Management
 active: false
 link: http://intelligrated.com
