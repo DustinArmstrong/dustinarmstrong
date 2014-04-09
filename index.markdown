@@ -18,7 +18,8 @@ title: Front-End Designer &amp; Developer
 		{% for post in site.categories['blog'] limit:1 %}
 			<article>
 				<header>
-					<h3 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+					<h1 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+					{% if page.subtitle != %}<h2 class="h4">{{ page.subtitle }}</h1>{% endif %}
 					<p class="meta">{{ post.date | date_to_string }}</p>
 				</header>
 				<div class="post excerpt">

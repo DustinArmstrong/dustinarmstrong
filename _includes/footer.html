@@ -3,7 +3,7 @@
       				{% include default-columns.html %}
 						<form action="http://getsimpleform.com/messages?form_api_token=4525eb37bf3be47421fb41dcf2ce514e" method="post">
 							<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-							<input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+							<input type='hidden' name='redirect_to' value='{{ site.baseurl }}/thanks.html' />
 							<!-- all your input fields here.... -->
 							<label for="name">Name:</label>
 							<input type='text' name='content' id='name' />
@@ -17,7 +17,7 @@
       			</div>
         		<div class="row">
 					{% include default-columns.html %}
-						&copy;2014 Dustin Armstrong
+						&copy;2014 Dustin Armstrong - <a href="mailto:dustin@dustinarmstrong.com">dustin@dustinarmstrong.com</a>
 					</div>
         		</div>
     		</footer>
