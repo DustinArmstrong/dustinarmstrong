@@ -3545,6 +3545,9 @@ body {
       font-style: italic; }
       body .section .post.excerpt .read-more a {
         background-image: none; }
+    body .section .post p.case-study-details {
+      margin-top: 2em;
+      font-size: .8em; }
     body .section header {
       margin-top: 0;
       margin-bottom: 1em;
