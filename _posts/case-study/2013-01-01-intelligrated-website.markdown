@@ -2,7 +2,7 @@
 layout: post
 title:  "Corporate Website"
 client: "Intelligrated"
-skills: Web Design, HTML, CSS, Drupal, Project Management
+skills: Web Design, HTML, CSS, jQuery, Drupal, Project Management
 active: false
 link: http://intelligrated.com
 maintaining: false
