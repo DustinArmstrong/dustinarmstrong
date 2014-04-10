@@ -9,7 +9,7 @@ title:  This is my Blog
 			<article>
 				<header>
 					<h1 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-					{% if post.subtitle != %}<h2 class="h4">{{ post.subtitle }}</h1>{% endif %}
+					{% if post.subtitle != %}<h2 class="h4">{{ post.subtitle }}</h2>{% endif %}
 					<p class="meta">{{ post.date | date_to_string }}</p>
 				</header>
 				<div class="post">

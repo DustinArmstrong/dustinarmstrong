@@ -13,13 +13,13 @@ title: Front-End Designer &amp; Developer
 <div class="row full-width section text-left">
 	{% include default-columns.html %}
 		<header class="sidebar">
-			<h2 class="h1">(My Most Recent Blog Post)</h4>
+			<h2 class="h1">(My Most Recent Blog Post)</h2>
 		</header>
 		{% for post in site.categories['blog'] limit:1 %}
 			<article>
 				<header>
 					<h1 class="h2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-					{% if page.subtitle != %}<h2 class="h4">{{ page.subtitle }}</h1>{% endif %}
+					{% if page.subtitle != %}<h2 class="h4">{{ page.subtitle }}</h2>{% endif %}
 					<p class="meta">{{ post.date | date_to_string }}</p>
 				</header>
 				<div class="post excerpt">
