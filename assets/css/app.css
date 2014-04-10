@@ -3498,7 +3498,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 html, body {
   height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  overflow-x: hidden; }
 
 body {
   color: #f0f0f0;
