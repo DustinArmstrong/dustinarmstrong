@@ -8,10 +8,8 @@ $footer-height: 2em;
 html, body {
 	height: 100%;
 	max-width: 100%;
-	overflow: auto;
 }
 body {
-	max-height: 100%;
 	color: $white;
 	@include transition(.5s);
 	&.pink {
