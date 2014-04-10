@@ -3,7 +3,7 @@ layout: posts
 ---
 <div class="row full-width section">
 	{% include default-columns.html %}
-		{% if post.categories == case-study %}
+		{% if page.categories contains 'case-study' %}
 			<article>
 				<header>
 					<h1 class="h2">{{ page.title }} / {{ page.client }}</h1>
