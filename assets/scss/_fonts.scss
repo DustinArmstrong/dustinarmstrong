@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
+// Use the following CSS code if you want to use data attributes for inserting your icons
 [data-icon]:before {
 	font-family: 'posthuman';
 	content: attr(data-icon);
@@ -22,12 +22,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="ph-"] {
-*/
+//Use the following CSS code if you want to have a class per icon
+//Instead of a list of all class selectors, you can use the generic selector below, but it's slower: [class*="ph-"] {
+
 .ph-posthuman_text, .ph-posthuman_hexagon, .ph-sun-stroke, .ph-moon-stroke, .ph-facebook, .ph-twitter, .ph-linkedin, .ph-reddit, .ph-envelop, .ph-lock, .ph-user, .ph-eye, .ph-eye-blocked, .ph-feed, .ph-embed, .ph-code, .ph-tumblr, .ph-html5, .ph-css3, .ph-chrome, .ph-firefox, .ph-IE, .ph-opera, .ph-safari, .ph-apple, .ph-finder, .ph-android, .ph-windows8, .ph-soundcloud, .ph-github, .ph-github-2, .ph-github-3, .ph-google-plus, .ph-contrast, .ph-location, .ph-pencil, .ph-phone, .ph-keyboard, .ph-screen, .ph-laptop, .ph-mobile, .ph-mobile-2, .ph-tablet, .ph-tv, .ph-cog, .ph-bug, .ph-link, .ph-vimeo, .ph-instagram, .ph-google-drive, .ph-dribbble, .ph-flickr, .ph-wordpress, .ph-foursquare, .ph-pinterest, .ph-paypal, .ph-file-xml, .ph-file-css, .ph-windows, .ph-forrst, .ph-stackoverflow, .ph-youtube, .ph-youtube-2, .ph-tag, .ph-cart, .ph-image, .ph-camera, .ph-music, .ph-arrow-left, .ph-arrow-right, .ph-arrow-up, .ph-arrow-down, .ph-search, .ph-spinner, .ph-mug, .ph-tux, .ph-warning, .ph-checkmark, .ph-cancel, .ph-copy, .ph-bullhorn {
 	font-family: 'posthuman';
 	speak: none;

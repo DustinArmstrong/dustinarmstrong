@@ -25,6 +25,12 @@ $em-reset-large: 22px !default;
 $em-reset-extra-large: 24px !default;
 
 // Font Families
+$import-default-fonts: true !default;
+
+@if $import-default-fonts == true {
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
+}
+
 $h-font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 $content-font-family: "Gentium Book Basic", Times, serif !default;
 
@@ -56,12 +62,6 @@ body {
 		font-size: $em-reset-extra-large;
 	}
 }
-
-$import-default-fonts: true !default;
-
-@if $import-default-fonts == true {
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Gentium+Book+Basic:400,700,400italic,700italic);
-} 
 
 @mixin h-elements {
 	@for $i from 1 through 6 {
