@@ -1,5 +1,5 @@
 name: Dustin Armstrong
-baseurl: /dustinarmstrong
+baseurl: http://dustinarmstrong.com
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:title
