@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>/blog/h-element-generator-sass-mixin</loc>
+      <loc>http://dustinarmstrong.com/blog/h-element-generator-sass-mixin</loc>
       
         <lastmod>2014-04-06T18:00:00Z</lastmod>
       
@@ -19,7 +19,7 @@
   
     
     <url>
-      <loc>/case-study/sellers-toolbox-application</loc>
+      <loc>http://dustinarmstrong.com/case-study/sellers-toolbox-application</loc>
       
         <lastmod>2014-04-01T22:04:58Z</lastmod>
       
@@ -34,7 +34,7 @@
   
     
     <url>
-      <loc>/case-study/recharge-website</loc>
+      <loc>http://dustinarmstrong.com/case-study/recharge-website</loc>
       
         <lastmod>2014-03-31T23:59:59Z</lastmod>
       
@@ -49,7 +49,7 @@
   
     
     <url>
-      <loc>/case-study/dobos-delights-website</loc>
+      <loc>http://dustinarmstrong.com/case-study/dobos-delights-website</loc>
       
         <lastmod>2014-03-30T22:04:58Z</lastmod>
       
@@ -64,7 +64,7 @@
   
     
     <url>
-      <loc>/case-study/juice-vault-website</loc>
+      <loc>http://dustinarmstrong.com/case-study/juice-vault-website</loc>
       
         <lastmod>2013-02-01T22:04:58Z</lastmod>
       
@@ -79,7 +79,7 @@
   
     
     <url>
-      <loc>/case-study/intelligrated-website</loc>
+      <loc>http://dustinarmstrong.com/case-study/intelligrated-website</loc>
       
         <lastmod>2013-01-01T22:04:58Z</lastmod>
       
@@ -95,24 +95,9 @@
   
     
     <url>
-      <loc>/blog/</loc>
+      <loc>http://dustinarmstrong.com/blog/</loc>
       
-        <lastmod>2014-04-16T18:01:10-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/case-studies/</loc>
-      
-        <lastmod>2014-04-16T18:01:10-04:00</lastmod>
+        <lastmod>2014-04-16T18:07:22-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -125,9 +110,9 @@
   
     
     <url>
-      <loc>/</loc>
+      <loc>http://dustinarmstrong.com/case-studies/</loc>
       
-        <lastmod>2014-04-16T18:01:10-04:00</lastmod>
+        <lastmod>2014-04-16T18:07:22-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -140,9 +125,24 @@
   
     
     <url>
-      <loc>/sitemap.xml</loc>
+      <loc>http://dustinarmstrong.com/</loc>
       
-        <lastmod>2014-04-16T18:01:10-04:00</lastmod>
+        <lastmod>2014-04-16T18:07:22-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://dustinarmstrong.com/sitemap.xml</loc>
+      
+        <lastmod>2014-04-16T18:07:22-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
