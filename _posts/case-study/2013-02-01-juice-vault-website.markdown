@@ -2,7 +2,7 @@
 layout: post
 title:  "Web Application"
 client: "JuiceVault"
-skills: Web Design, HTML, CSS, jQuery, Foundation, Ruby on Rails, Marketing
+skills: HTML, CSS, jQuery, Foundation, Ruby on Rails, Marketing
 active: true
 link: http://myjuicevault.com
 maintaining: true
