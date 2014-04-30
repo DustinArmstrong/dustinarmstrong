@@ -929,6 +929,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
+@-webkit-keyframes logo {
+  0%  img.portrait {
+    opacity: 1; }
+
+  100% {
+    border-radius: 200px;
+    transform: rotateY(180deg); } }
 @-webkit-keyframes flip {
   0% {
     -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
@@ -1171,10 +1178,52 @@ body {
       float: none;
       clear: both; }
       body header .avatar a {
-        background-image: none; }
-      body header .avatar img {
+        background-image: none;
+        width: 5em;
+        height: 5em;
+        margin: auto;
+        position: relative;
+        display: block; }
+        body header .avatar a:hover .logo {
+          z-index: 1;
+          -webkit-transform: rotateX(180deg);
+          -ms-transform: rotateX(180deg);
+          -moz-transform: rotateX(180deg);
+          transform: rotateX(180deg); }
+        body header .avatar a:hover .portrait {
+          z-index: 2;
+          -webkit-transform: rotateX(0deg);
+          -ms-transform: rotateX(0deg);
+          -moz-transform: rotateX(0deg);
+          transform: rotateX(0deg); }
+      body header .avatar .flip {
         width: 100%;
-        border-radius: 200px; }
+        height: 100%;
+        -o-transition: all .5s;
+        -ms-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px; }
+        body header .avatar .flip.logo {
+          z-index: 2;
+          background-image: url("../img/dustinarmstrong-logo.svg"); }
+        body header .avatar .flip.portrait {
+          z-index: 1;
+          background-image: url("../img/dustinarmstrong.jpeg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 200px;
+          -webkit-transform: rotateX(-180deg);
+          -ms-transform: rotateX(-180deg);
+          -moz-transform: rotateX(-180deg);
+          transform: rotateX(-180deg); }
     body header h1, body header .h1 {
       color: #f0f0f0;
       text-transform: uppercase;
