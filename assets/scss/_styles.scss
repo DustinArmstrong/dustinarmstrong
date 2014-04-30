@@ -73,10 +73,58 @@ body {
 			clear: both;
 			a {
 				background-image: none;
+				width: 5em;
+			    height: 5em;
+			    margin: auto;
+			    position: relative;
+			    display: block;
+			    &:hover {
+					.logo {
+						z-index: 1;
+					    -webkit-transform: rotateX(180deg);
+					    -ms-transform: rotateX(180deg);
+					    -moz-transform: rotateX(180deg);
+					    transform: rotateX(180deg);
+					}
+					.portrait {
+						z-index: 2;   
+					    -webkit-transform: rotateX(0deg);
+					    -ms-transform: rotateX(0deg);
+					    -moz-transform: rotateX(0deg);
+					    transform: rotateX(0deg);
+					}
+			    }
 			}
-			img {
+			.flip {
 				width: 100%;
-				border-radius: 200px;	
+			    height: 100%;
+			    -o-transition: all .5s;
+			    -ms-transition: all .5s;
+			    -moz-transition: all .5s;
+			    -webkit-transition: all .5s;
+			    transition: all .5s;
+			    -webkit-backface-visibility: hidden;
+			    -ms-backface-visibility: hidden;
+			    -moz-backface-visibility: hidden;
+			    backface-visibility: hidden;
+			    position: absolute;
+			    top: 0px;
+			    left: 0px;
+			    &.logo {
+			    	z-index: 2;
+			    	background-image: url('../img/dustinarmstrong-logo.svg');
+			    }
+				&.portrait {
+					z-index: 1;
+					background-image: url('../img/dustinarmstrong.jpeg');
+					background-size: cover;
+					background-repeat: no-repeat;
+					border-radius: 200px;
+				    -webkit-transform: rotateX(-180deg);
+				    -ms-transform: rotateX(-180deg);
+				    -moz-transform: rotateX(-180deg);  
+				    transform: rotateX(-180deg);
+				}
 			}
 		}
 		h1, .h1 {
