@@ -112,13 +112,13 @@ body {
 			    left: 0px;
 			    &.logo {
 			    	z-index: 2;
-			    	background-image: url('../img/dustinarmstrong-logo.svg');
+			    	background: url('../img/dustinarmstrong-logo.svg') center center no-repeat;
+			    	background-size: contain;
 			    }
 				&.portrait {
 					z-index: 1;
-					background-image: url('../img/dustinarmstrong.jpeg');
+					background: url('../img/dustinarmstrong.jpeg') center center no-repeat;
 					background-size: cover;
-					background-repeat: no-repeat;
 					border-radius: 200px;
 				    -webkit-transform: rotateX(-180deg);
 				    -ms-transform: rotateX(-180deg);
