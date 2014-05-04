@@ -18,7 +18,7 @@ html, body {
 body {
 	background: whitesmoke;
 	color: whitesmoke;
-	.preload * {
+	&.preload * {
 		display: none;
 		-webkit-transition: none !important;
 		-moz-transition: none !important;
