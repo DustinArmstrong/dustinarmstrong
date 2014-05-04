@@ -1298,7 +1298,7 @@ body {
   background: whitesmoke;
   color: whitesmoke;
 }
-body .preload * {
+body.preload * {
   display: none;
   -webkit-transition: none !important;
   -moz-transition: none !important;
