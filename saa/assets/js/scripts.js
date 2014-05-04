@@ -22,13 +22,4 @@ $(window).bind("load", function() {
 	$('.heart').addClass('animated slideInRight');
 	$('.greeting').addClass('animated fadeIn');
 	$('.hire-me').addClass('animated slideInUp');
-	// $('#two').waypoint(function() {
-		
-	// });
-	$('#portfolio-slider').owlCarousel({
-		navigation : true,
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		singleItem : true
-	});
 });
