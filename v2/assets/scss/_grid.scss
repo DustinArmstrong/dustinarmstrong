@@ -1,0 +1,156 @@
+$total-columns: 12 !default;
+$column-gutter: 2% !default;
+$max-row-width: 1224px !default;
+
+$screen-enabled: false !default;
+$extra-large-enabled: false !default;
+
+$screen: if($screen-enabled == true, "only screen", null) !default;
+$small: if($screen-enabled == true, "only screen and (min-width: 600px)", "only screen") !default;
+$medium: "only screen and (min-width: 768px)" !default;
+$large: "only screen and (min-width: 1024px)" !default;
+$extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300px)", null) !default;
+
+//////////////////////////////////////////////////
+// Column Generator
+//////////////////////////////////////////////////
+
+@mixin columns($size) {
+	@for $i from 1 through $total-columns {
+		$column-calc: (100% / $total-columns) * $i;
+		.#{$size}#{-$i} {
+			@if $size == push {
+				left: $column-calc;
+			}
+			@elseif $size == pull {
+				right: $column-calc;
+			}
+			@else {
+				width: $column-calc;
+			}
+			position: relative;
+		}
+		@if $size != push and $size != pull {
+			.#{$size}-offset#{-$i} {
+				margin-left: $column-calc;
+			}
+		}
+	}
+	@if $size != push and $size != pull {
+		.#{$size}-centered {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			float: none !important;
+		}
+		.#{$size}-uncentered {
+			position: relative;
+			margin-left: 0;
+			margin-right: 0;
+			float: left !important;
+		}
+	}
+}
+
+//////////////////////////////////////////////////
+// Row Defaults
+//////////////////////////////////////////////////
+
+.row {
+	width: auto;
+	margin: 0 auto;
+	max-width: $max-row-width;
+	&:before, &:after {
+		content: " ";
+    	display: table;
+    }
+    &:after {
+    	clear: both;
+    }
+    &.collapse > .column, &.collapse > .columns {
+		padding: 0px;
+    }
+    &.full-width {
+    	max-width: 100%;
+    	.row {
+    		max-width: $max-row-width;
+    	}
+    }
+    .row {
+    	width: auto;
+    	// margin-left: -$column-gutter / 2;
+    	// margin-right: -$column-gutter / 2;
+    	max-width: 100%;
+    	&:before, &:after {
+			content: " ";
+			display: table;
+	    }
+	    &:after {
+	    	clear: both;
+	    }
+	    &.collapse > .column, &.collapse > .columns {
+			padding: 0px;
+	    }
+	    &.full-width {
+	    	max-width: 100%;
+	    }
+    }
+}
+
+//////////////////////////////////////////////////
+// Column Defaults
+//////////////////////////////////////////////////
+
+.column, .columns {
+	float: left;
+	padding-left: $column-gutter / 2;
+	padding-right: $column-gutter / 2;
+	width: 100%;
+}
+
+//////////////////////////////////////////////////
+// Float/Text Alignment Generators
+//////////////////////////////////////////////////
+
+@each $float in left, right {
+	.#{$float} {
+		float: $float !important;
+	}
+}
+@each $align in left, right, center {
+	.text-#{$align} {
+		text-align: $align;
+	}
+}
+
+//////////////////////////////////////////////////
+// Column Output
+//////////////////////////////////////////////////
+
+@include columns(push);
+
+@include columns(pull);
+
+@if $screen-enabled == true {
+	@media #{$screen} {
+		@include columns(screen);	
+	}
+}
+
+@media #{$small} {
+	@include columns(small);	
+}
+
+@media #{$medium} {
+	@include columns(medium);
+}
+
+@media #{$large} {
+	@include columns(large);
+}
+
+@if $extra-large-enabled == true {
+	@media #{$extra-large} {
+		@include columns(extra-large);
+	}
+}
