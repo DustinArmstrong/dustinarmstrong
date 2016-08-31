@@ -16,7 +16,7 @@ $(function() {
 $(window).bind("load", function() {
 	$("body").removeClass("preload");
 	$('#topbar').addClass('animated slideInDown');
-	$('.avatar').addClass('animated slideInLeft');
+	$('.avatar').addClass('animated flipInX');
 	$('.plus, .equals').addClass('animated rotateIn');
 	$('.saa-logo').addClass('animated slideInDown');
 	$('.heart').addClass('animated slideInRight');
