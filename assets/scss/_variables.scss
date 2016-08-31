@@ -13,7 +13,7 @@
 // Rows
 //////////////////////////////
 
-	$max-row-width: 99%; // Basically the max-width of your site. All rows will use this without the full-width class
+	// $max-row-width: 1224px; // Basically the max-width of your site. All rows will use this without the full-width class
 
 //////////////////////////////
 // Media Queries
@@ -46,15 +46,15 @@
 // Font Families
 //////////////////////////////
 
-	$h-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default h element font-family
-	// $content-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; // Sets default content font-family
+	$h-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	$content-font-family: "futura-pt", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 //////////////////////////////
 // Font Sizes
 //////////////////////////////
 
 	// $h-font-size: 2em; // Sets default h element font-size
-	$h-font-weight: 300; // Sets default h element font-weight
+	// $h-font-weight: 700; // Sets default h element font-weight
 	// $content-font-size: 1em; // Sets default content font-size
 	// $content-font-weight: 300; // Sets default content font-weight
 
@@ -69,14 +69,14 @@
 // Button/Link Colors
 //////////////////////////////
 
-	$primary: rgb(10, 10, 10);
-		// $primary-hover: lighten($primary, 50%);
+	// $primary: rgb(0, 0, 255);
+		// $primary-hover: darken($primary, 10%);
 
-	// $secondary: rgb(156, 161, 163);
+	// $secondary: rgb(173, 216, 230);
 		// $secondary-hover: darken($secondary, 10%);
 
-	// $disabled: rgb(241, 241, 241);
-		// $disabled-hover: $disabled;
+	// $disabled: rgb(128, 128, 128);
+		// $disabled-hover: darken($disabled, 10%);
 
 	// $alert: rgb(255, 0, 0);
 		// $alert-hover: darken($alert, 10%);
@@ -87,4 +87,4 @@
 
 	// $button-padding: .5em;
 	// $button-font-size: 1em;
-	// $border-radius: 2px;
+	// $button-border-radius: 2px;

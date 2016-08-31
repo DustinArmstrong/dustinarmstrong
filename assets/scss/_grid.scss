@@ -2,11 +2,14 @@ $total-columns: 12 !default;
 $column-gutter: 2% !default;
 $max-row-width: 1224px !default;
 
-$screen: "only screen" !default;
-$small: "only screen and (min-width: 600px)" !default;
+$screen-enabled: false !default;
+$extra-large-enabled: false !default;
+
+$screen: if($screen-enabled == true, "only screen", null) !default;
+$small: if($screen-enabled == true, "only screen and (min-width: 600px)", "only screen") !default;
 $medium: "only screen and (min-width: 768px)" !default;
 $large: "only screen and (min-width: 1024px)" !default;
-$extra-large: "only screen and (min-width: 1300px)" !default;
+$extra-large: if($extra-large-enabled == true, "only screen and (min-width: 1300px)", null) !default;
 
 //////////////////////////////////////////////////
 // Column Generator
@@ -29,7 +32,7 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
 		}
 		@if $size != push and $size != pull {
 			.#{$size}-offset#{-$i} {
-				margin-left: $column-calc !important;
+				margin-left: $column-calc;
 			}
 		}
 	}
@@ -69,6 +72,9 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
     }
     &.full-width {
     	max-width: 100%;
+    	.row {
+    		max-width: $max-row-width;
+    	}
     }
     .row {
     	width: auto;
@@ -77,7 +83,7 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
     	max-width: 100%;
     	&:before, &:after {
 			content: " ";
-	    	display: table;
+			display: table;
 	    }
 	    &:after {
 	    	clear: both;
@@ -125,8 +131,10 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
 
 @include columns(pull);
 
-@media #{$screen} {
-	@include columns(screen);	
+@if $screen-enabled == true {
+	@media #{$screen} {
+		@include columns(screen);	
+	}
 }
 
 @media #{$small} {
@@ -141,6 +149,8 @@ $extra-large: "only screen and (min-width: 1300px)" !default;
 	@include columns(large);
 }
 
-@media #{$extra-large} {
-	@include columns(extra-large);
+@if $extra-large-enabled == true {
+	@media #{$extra-large} {
+		@include columns(extra-large);
+	}
 }

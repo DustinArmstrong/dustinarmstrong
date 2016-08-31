@@ -1,364 +1,396 @@
-$white: rgb(240, 240, 240);
-$footer-height: 2em;
-@mixin transition($duration: 1s) {
-	transition: all $duration;
-		-webkit-transition: all $duration;
-		-moz-transition: all $duration;
+@mixin background-gradient($primarycolor, $secondarycolor, $imageurl: "" ) {
+	background: $primarycolor;
+	@if $imageurl != null {
+		background: linear-gradient(45deg, $primarycolor 0%,$secondarycolor 100%),
+		url($imageurl) center center no-repeat;
+	} @else {
+		background: linear-gradient(45deg, $primarycolor 0%,$secondarycolor 100%);
+	}
+}
+@mixin transition($duration: 0.5s) {
+	transition: color $duration, height $duration, transform $duration;
 }
 html, body {
 	height: 100%;
-	max-width: 100%;
-	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
+	padding: 0px;
+	margin: 0px;
 }
 body {
-	color: $white;
-	@include transition(.5s);
-	&.pink {
-		background: #E56B6B;
-	}
-	&.blue {
-		background: rgb(26,198,204)
-	}
-	&.green {
-		background: #34EC86;
-	}
-	&.orange {
-		background: rgb(240, 154, 61);
-	}
-	h1, h2, h3, h4, h5, h6 {
-		color: $white !important;
-	}
-	p {
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	a {
-		color: $white;
-		background-image: linear-gradient(to top, rgba(0,0,0,0) 12%, $white 12%, $white 16%, rgba(0,0,0,0) 16%);
-		&:visited, &:hover {
-			color: inherit;
-		}
-	}
-	img {
-		max-width: 100%;
-	}
-	blockquote {
-		border-left: 2px solid $white;
-	}
-	.site {
-		min-height: 100%;
-		margin-bottom: -$footer-height;
-		&:after {
-			content: "";
-			display: block;
-			height: $footer-height;
-		}	
-	}
-	// THIS NEEDS TO BE MERGED
-	header {
-		margin: 2em 0 3em 0;
-		text-align: center;
-		&:not(.main-header) {
-			// text-align: left !important;
-		}
-		.avatar {
-			margin-bottom: 1em;
-			display: inline-block;
-			width: 5em;
-			height: 5em;
-			-webkit-animation-delay: 1s;
-			float: none;
-			clear: both;
-			a {
-				background-image: none;
-				width: 5em;
-			    height: 5em;
-			    margin: auto;
-			    position: relative;
-			    display: block;
-			    &:hover {
-					.logo {
-						z-index: 1;
-					    -webkit-transform: rotateX(180deg);
-					    -ms-transform: rotateX(180deg);
-					    -moz-transform: rotateX(180deg);
-					    transform: rotateX(180deg);
-					}
-					.portrait {
-						z-index: 2;   
-					    -webkit-transform: rotateX(0deg);
-					    -ms-transform: rotateX(0deg);
-					    -moz-transform: rotateX(0deg);
-					    transform: rotateX(0deg);
-					}
-			    }
-			}
-			.flip {
-				width: 100%;
-			    height: 100%;
-			    -o-transition: all .5s;
-			    -ms-transition: all .5s;
-			    -moz-transition: all .5s;
-			    -webkit-transition: all .5s;
-			    transition: all .5s;
-			    -webkit-backface-visibility: hidden;
-			    -ms-backface-visibility: hidden;
-			    -moz-backface-visibility: hidden;
-			    backface-visibility: hidden;
-			    position: absolute;
-			    top: 0px;
-			    left: 0px;
-			    &.logo {
-			    	z-index: 2;
-			    	background: url('../img/dustinarmstrong-logo.svg') center center no-repeat;
-			    	background-size: contain;
-			    }
-				&.portrait {
-					z-index: 1;
-					background: url('../img/dustinarmstrong.jpeg') center center no-repeat;
-					background-size: cover;
-					border-radius: 200px;
-				    -webkit-transform: rotateX(-180deg);
-				    -ms-transform: rotateX(-180deg);
-				    -moz-transform: rotateX(-180deg);  
-				    transform: rotateX(-180deg);
-				}
-			}
-		}
-		h1, .h1 {
-			color: $white;
-			text-transform: uppercase;
-			font-size: 1.8em;
-			margin-bottom: 0;
-			line-height: 1em;
-			@media #{$medium} {
-				margin-top: .1em;
-				font-size: 2em;
-			}
-			@media #{$large} {
-				margin-top: .2em;
-				font-size: 2.5em;
-			}
-			small {
-				font-style: italic;
-				line-height: 1em;
-				margin-top: .4em;
-			}
-		}
-		h2, .h2 {
-			text-transform: uppercase;
-		}
-
-	}
-	nav {
-		ul {
-			margin-top: 1em;
-			text-align: center;
-			height: 0;
-			@include transition(.1s);
-			&:before {
-				content: "Menu";
-				font-family: $h-font-family;
-				font-size: 1em;
-				position: absolute;
-				right: .1em;
-				top: 0;
-				padding: 1em;
-				display: block;
-				border: 1px solid $white;
-				border-radius: 200px;
-				overflow: hidden;
-				height: 0;
-			}
-			@media #{$medium} {
-				text-align: right;
-				height: auto !important;
-				&:before {
-					display: none;
-				}
-			}
-			&.expand {
-				height: 145px;
-				overflow: hidden;
-				@include transition(.1s);
-				&:before {
-					content: "Close";
-					top: 8.2em;
-					right: .1em;
-				}
-				li {
-					display: inline-block;
-				}
-			}
-			li {
-				display: none;
-				border-radius: 200px;
-				padding: 0;
-				margin: 0 .1em .5em 0;
-				font-size: 1em;
-				background: transparent;
-				border: 1px solid $white;
-				outline: 0;
-				@include transition(.3s);
-				width: 49%;
-				&:nth-child(even) {
-					float: right;
-				}
-				&:nth-child(odd) {
-					float: left;
-				}
-				&:focus {
-					box-shadow: none;
-				}
-				&:hover {
-					background: rgba(0,0,0,0.2);
-					@include transition(.3s);
-				}
-				&:last-child {
-					margin-right: 0;
-				}
-				@media #{$medium} {
-					font-size: .7em;
-					display: inline-block;
-					width: auto;
-					margin: 0 .2em 1em 0;
-					border: 2px solid $white;
-					&:nth-child(even), &:nth-child(odd) {
-						float: none;
-					}
-				}
-				a, a:visited, a:hover {
-					color: $white;
-					font-family: $h-font-family;
-					padding: .3em 1em;
-					display: block;
-					@media #{$medium} {
-						padding: .5em 1em;
-					}
-				}
-			}
-			.content {
-				padding: 1em 0;
-			}
-		}
-	}
-	.section {
-		padding: 4em 0;
-		background: $primary;
-		.highlight {
-			background: rgb(30,30,30);
-		}
-		&:nth-child(even) {
-			background: rgb(30,30,30);
-			.highlight {
-				background: $primary;
-			}
-		}
-		.post {
-			&.excerpt {
-				p {
-					margin-bottom: .3em;
-				}
-				.read-more {
-					float: right;
-					margin-right: 1em;
-					font-size: .9em;
-					font-style: italic;
-					a {
-						background-image: none;
-					}
-				}
-			}
-			p {
-				&.case-study-details {
-					margin-top: 2em;
-					font-size: .8em;
-				}
-			}
-		}
-		header {
-			margin-top: 0;
-			margin-bottom: 1em;
-			text-align: center;
-			&.sidebar {
-				margin-bottom: .2em;
-				h1, .h1, h2, .h2 {
-					font-size: .7em;
-				}
-			}
-			h1, .h1, h2, .h2 {
-				margin-bottom: 0;
-			}
-			.meta {
-				font-family: $h-font-family;
-				font-size: .7em;
-				&:before, &:after {
-					content: "•";
-					padding: .1em;
-				}
-			}
-			a {
-				color: $white;
-				font-family: $h-font-family;
-				text-transform: uppercase;
-				background-image: none;
-			}
-		}
-		// &:last-child {
-		// 	padding: 0 0 4em 0;
-		// }
-	}
-	.introduction {
-		position: fixed;
-		//display: table;
+	background: whitesmoke;
+	color: whitesmoke;
+	&.preload * {
 		display: none;
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+	}
+	h1 {
+		color: $black;
+	}
+	h2, h3, h4, h5, h6 {
+		color: whitesmoke;
+	}
+	#topbar {
+		position: fixed;
 		top: 0;
 		left: 0;
-		height: 100%;
-		max-height: 100%;
+		right: 0;
+		background: whitesmoke;
+		border-bottom: 0;
+		height: 60px;
+		z-index: 4000;
 		overflow: hidden;
-		width: 100%;
-		background-color: rgb(255,255,255);
-		&.hidden {
-			display: none;
-			height: 0;
-			width: 0;
-			overflow: hidden;
+		padding: 9px 10px;
+		@media #{$medium} {
+			padding: 9px 0px;
 		}
-		header {
-			text-align: left;
+		a {
+			color: $black;
 		}
-		.vertical-wrapper {
-			display: table-cell;
-			vertical-align: middle;
+		.branding {
+			#logo, h1 {
+				float: left;
+				display: block;
+			}
+			#logo {
+				max-height: 40px;
+				max-width: 40px;
+				margin-right: .6em;
+			}
+			h1 {
+				font-size: 24px;
+				margin-top: 6px;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				@media #{$medium} {
+					font-size: 35px;
+					margin-top: 0;
+				}
+			}
 		}
-		.intro {
-			color: $primary;
-		}
-		button {
-			border-radius: 0;
-			background: $primary;
-			border: 0px;
-			@include transition(.3s);
-			&:hover {
-				background: lighten($primary, 20%);
-				@include transition(.3s);
+		nav {
+			ul {
+				li {
+					a {
+						padding: 0.25em 0.6em;
+						display: block;
+						border-radius: 200px;
+						transition: .2s;
+						font-weight: 500;
+						&.experience {
+							&:hover {
+								color: whitesmoke;
+								@include background-gradient(rgb(26, 198, 204), rgb(79, 135, 172));
+							}
+						}
+						&.skills {
+							&:hover{
+								color: whitesmoke;
+								@include background-gradient(#AF04A7, #CC0C49);
+							}
+						}
+						&.portfolio, &.contact {
+							&:hover {
+								color: whitesmoke;
+								@include background-gradient(rgb(0, 225, 85), rgb(16, 220, 208));
+							}
+						}
+						//&.contact {
+						//	&:hover {
+						//		color: whitesmoke;
+						//		@include background-gradient(rgb(206, 47, 10), rgb(255, 144, 0));
+						//	}
+						//}
+					}
+				}
 			}
 		}
 	}
-	.highlight {
-		background: #1A1A1A;
-	}
-	.site-footer {
+	section {
+		position: relative;
+
+		display: table;
+		overflow: hidden;
+		width: 100%;
+		min-height: 100%;
+		height: 100%;
+		padding: 3em 0;
+		margin: 0 auto;
+
 		text-align: center;
-		height: $footer-height;
-		padding: .5em 0;
-		font-family: $h-font-family;
-		a {
-			font-family: inherit;
+		@media #{$medium} {
+			padding: 2em 0;
+		}
+		header {
+			margin-bottom: 3em;
+			h2 {
+				color: whitesmoke;
+				display: inline-block;
+				@media #{$medium} {
+					//background-image: linear-gradient(to top, rgba(0,0,0,0) 10%, whitesmoke 10%, whitesmoke 14%, rgba(0,0,0,0) 14%);
+				}
+			}
+		}
+		.content {
+			margin-top: 20px; // THIS NEEDS FIXED
+		}
+		.button {
+			display: none;
+			@include background-gradient($black, $black);
+			border-radius: 200px;
+			color: white;
+			font-family: $h-font-family;
+			font-weight: 700;
+			font-size: 1.5em;
+			margin: 2em 0 0 0;
+			padding: .4em .6em;
+			transition: 1s;
+			@media #{$medium} {
+				display: inline-block;
+			}
+		}
+		.section-icon {
+			display: block;
+			margin: 0 auto;
+			max-width: 100px;
+			max-height: 100px;
+		}
+		&#one {
+			.avatar {
+				border-radius: 200px;
+				display: inline-block;
+				background: url("../img/dustinarmstrong.png") no-repeat center center;
+				background-size: cover;
+				max-width: 70px;
+				width: 70px;
+				max-height: 70px;
+				height: 70px;
+				animation-delay: 1s;
+				@media #{$medium} {
+					max-width: 200px;
+					width: 200px;
+					max-height: 200px;
+					height: 200px;
+				}
+			}
+			.plus, .equals {
+				font-size: 1em;
+				display: inline-block;
+				vertical-align: top;
+				margin: 25px 5px;
+				font-weight: 800;
+				color: $black;
+				@media #{$medium} {
+					font-size: 3em;
+					margin: 65px 10px;
+				}
+			}
+			.plus {
+				animation-delay: 2s;
+				&:before {
+					content: "+";
+				}
+			}
+			.saa-logo {
+				animation-delay: 2s;
+			}
+			.equals {
+				animation-delay: 3s;
+				&:before {
+					content: "=";
+				}
+			}
+			.heart {
+				animation-delay: 3s;
+			}
+			.greeting {
+				animation-delay: 1.5s;
+				margin: 2em 0;
+				color: $black;
+				font-style: italic;
+				font-weight: 300;
+			}
+			.hire-me {
+				animation-delay: 2s;
+				&:hover {
+					@include background-gradient(rgb(26, 198, 204), rgb(79, 135, 172));
+					transition: 1s;
+				}
+			}
+			img {
+				max-width: 70px;
+				max-height: 70px;
+				@media #{$medium} {
+					max-width: 200px;
+					max-height: 200px;
+				}
+			}
+		}
+
+		&#two {
+			@include background-gradient(rgba(26, 198, 204, 0.95), rgba(79, 135, 172, 0.95), "../img/geo-background.png");
+			background-repeat: repeat;
+			background-attachment: fixed;
+			position: static;
+			.employer {
+				margin-bottom: 3em;
+				h3 {
+					margin-bottom: 10px;
+				}
+				h4 {
+					margin-bottom: 0;
+					font-style: italic;
+					font-weight: 500;
+					margin-bottom: 10px;
+				}
+				small {
+					font-family: $h-font-family;
+					font-weight: 200;
+					font-size: 0.65em;
+					margin-bottom: 10px;
+					display: inline-block;
+					&:before, &:after {
+						content: "•";
+						padding: .5em;
+					}
+				}
+				p {
+					font-size: .9em;
+				}
+			}
+      .clients {
+          font-size: .8em;
+      }
+			.skills {
+				&:hover {
+					@include background-gradient(#AF04A7, #CC0C49);
+					transition: 1s;
+				}
+			}
+		}
+
+		&#three {
+			@include background-gradient(rgba(159, 0, 225, 0.6), rgba(220, 16, 16, 0.6), "../img/diagonal-background.png");
+			background-repeat: repeat;
+			background-attachment: fixed;
+			position: static;
+			ul {
+				margin: 0 0 4em 0;
+				padding: 0;
+				li {
+					list-style-type: none;
+				}
+			}
+			.portfolio, .contact {
+				&:hover {
+					@include background-gradient(rgb(0, 225, 85), rgb(16, 220, 208));
+					transition: 1;
+				}
+			}
+		}
+
+		&#four {
+			@include background-gradient(rgba(0, 225, 85, 0.95), rgba(16, 220, 208, 0.95), "../img/isometric-background.png");
+			background-repeat: repeat;
+			background-attachment: fixed;
+			position: static;
+			.content {
+				.portfolio-project {
+					text-align: left;
+					margin-bottom: 3em;
+					padding-bottom: 3em;
+					border-bottom: 1px solid whitesmoke;
+					&:last-child {
+						border-bottom: none;
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+					h3 {
+						text-align: center;
+					}
+					header {
+						margin-bottom: 1em;
+						p {
+							font-family: $content-font-family;
+							font-style: italic;
+							font-size: .8em;
+							display: block;
+							margin: 1em 0;
+							&:first-child {
+								margin-top: 0;
+							}
+							a {
+								color: whitesmoke;
+								@media #{$medium} {
+									background-image: linear-gradient(to top, rgba(0,0,0,0) 10%, whitesmoke 10%, whitesmoke 14%, rgba(0,0,0,0) 14%);
+								}
+								&:hover {
+									color: $black;
+									@media #{$medium} {
+										background-image: linear-gradient(to top, rgba(0,0,0,0) 10%, $black 10%, $black 14%, rgba(0,0,0,0) 14%);
+									}
+								}
+							}
+						}
+					}
+					img {
+						width: 100%;
+					}
+				}
+				.contact {
+					&:hover {
+						color: whitesmoke;
+						@include background-gradient(rgb(206, 47, 10), rgb(255, 144, 0));
+					}
+				}
+			}
+		}
+		&#five {
+			//@include background-gradient(rgba(206, 47, 10, 0.6), rgba(255, 144, 0, 0.6), "../img/dustinarmstrong-background.jpg");
+			@include background-gradient(rgba(0, 225, 85, 0.95), rgba(16, 220, 208, 0.95), "../img/isometric-background-2.png");
+			//background-size: cover;
+			background-position: top;
+			//background-repeat: no-repeat;
+      background-repeat: repeat;
+			background-attachment: fixed;
+			position: static;
+			a {
+				color: whitesmoke;
+				@media #{$medium} {
+					background-image: linear-gradient(to top, rgba(0,0,0,0) 10%, whitesmoke 10%, whitesmoke 14%, rgba(0,0,0,0) 14%);
+				}
+				&:hover {
+					color: $black;
+					@media #{$medium} {
+						background-image: linear-gradient(to top, rgba(0,0,0,0) 10%, $black 10%, $black 14%, rgba(0,0,0,0) 14%);
+					}
+				}
+			}
+			img {
+				border-radius: 200px;
+			}
+			small {
+				font-family: $h-font-family;
+				font-weight: 200;
+				font-size: 0.65em;
+				margin-bottom: 10px;
+				display: inline-block;
+				&:before, &:after {
+					content: "•";
+					padding: .5em;
+				}
+			}
+		}
+
+		.content {
+			vertical-align: middle;
+
+			display: table-cell;
+			box-sizing: border-box;
+			padding: 5%;
+
+			text-align: center;
 		}
 	}
 }
-	

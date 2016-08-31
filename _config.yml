@@ -1,7 +1,0 @@
-name: Dustin Armstrong
-baseurl: http://dustinarmstrong.com
-markdown: redcarpet
-pygments: true
-permalink: /:categories/:title
-
-exclude: ['Gemfile', 'Gemfile.lock', 'rakefile', 'README.md']

@@ -1,14 +1,25 @@
-$(document).ready(
-	$('body.blue nav').addClass('animated slideInRight'),
-	$('body.blue .avatar').addClass('animated flipInX'),
-	$('body.blue .main-header h1, body.blue .main-header .h1').addClass('animated slideInDown'),
-	$('body.blue .section:nth-child(odd)').addClass('animated slideInLeft'),
-	$('body.blue .section:nth-child(even)').addClass('animated slideInRight'),
-	$('nav.primary ul').click(function() {
-		if ($(this).hasClass('expand')) {
-			$(this).removeClass();
-		} else {
-			$(this).addClass('expand');
-		}
-	})
-);
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+$(window).bind("load", function() {
+	$("body").removeClass("preload");
+	$('#topbar').addClass('animated slideInDown');
+	$('.avatar').addClass('animated slideInLeft');
+	$('.plus, .equals').addClass('animated rotateIn');
+	$('.saa-logo').addClass('animated slideInDown');
+	$('.heart').addClass('animated slideInRight');
+	$('.greeting').addClass('animated fadeIn');
+	$('.hire-me').addClass('animated slideInUp');
+});
